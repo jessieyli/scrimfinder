@@ -24,3 +24,10 @@ We have a lot of ideas on how to improve Scrim Searcher, and we'll be pursuing t
 - Integration of Riot API for Player and Team Information
 - Integration of Calendar API for Smoother Scheduling
 - Increased Flexibility in Scrimmage Time Selection
+
+[Check out our app on Heroku](https://scrim-searcher.herokuapp.com/)
+
+If you wish to run this app locally, make sure that you have installed Python3 and use the following commands:
+`venv/Scripts/activate
+pip install flask
+pip install mysql-connector`
