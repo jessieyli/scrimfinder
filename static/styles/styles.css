@@ -1,6 +1,19 @@
 body {
-    background-color: lightcoral;
     text-align: center;
+    background-image: url("../ashe.png");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.container {
+    display: inline-block;
+    background-color: #deedff !important;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 3px solid #021552;
 }
 
 #content {
@@ -10,7 +23,22 @@ body {
 
 #directory {
     text-align: center;
-    height: 200px;
-    width: 400px;
-    border: 3px solid black;
+}
+
+th {
+    padding: 5px;
+}
+td {
+    padding: 5px;
+}
+table {
+    border-collapse: collapse;
+}
+tr:nth-child(even) {
+    background-color: white !important;
+}
+
+input {
+    margin-right: 15px;
+    margin-bottom: 15px;
 }

@@ -4,72 +4,80 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width, initial-scale=1">
         <link rel="stylesheet" href="static/styles/styles.css">
+        <link rel="icon" href="../static/icon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
         <title>
-            ZACS RANSACK
+            Scrim Searcher
         </title>
     </head>
     <body>
-        <h1> Scrim Searcher </h1>
-        <div id="submitform">
-            <form action="/" method="post">
-                <label for="teamname">Team name:</label><br>
-                <input type="text" id="teamname" name="teamname"><br>
-                <label for="gametype">Game type:</label><br>
-                <select id="game" name="game">
-                    <option value="league">League of Legends</option>
-                    <option value="valorant">Valorant</option>
-                </select><br>
-                <label for="player1">Player 1:</label><br>
-                <input type="text" id="player1" name="player1"><br>
-                <label for="player2">Player 2:</label><br>
-                <input type="text" id="player2" name="player2"><br>
-                <label for="player3">Player 3:</label><br>
-                <input type="text" id="player3" name="player3"><br>
-                <label for="player4">Player 4:</label><br>
-                <input type="text" id="player4" name="player4"><br>
-                <label for="player5">Player 5:</label><br>
-                <input type="text" id="player5" name="player5"><br>
-                <label for="avgrank">Average Rank:</label><br>
-                <input type="text" id="avgrank" name="avgrank"><br>
-                <label for="time">Time:</label><br>
-                <input type="datetime-local" id="time" name="time"><br>
-                <label for="discord">Discord User:</label><br>
-                <input type="text" id="discord" name="discord"><br>
-                <input type="submit" value="submit">
-              </form>              
-        </div>
-        <br>
-        <div id="content">
-            <div id="directory">
-                <table>
-                    <tr>
-                        <th> Game </th>
-                        <th> Team Name </th>
-                        <th> Player 1 </th>
-                        <th> Player 2 </th>
-                        <th> Player 3 </th>
-                        <th> Player 4 </th>
-                        <th> Player 5 </th>
-                        <th> Average Rank </th>
-                        <th> Scrim Time </th>
-                        <th> Discord Username </th>
-                    </tr>
-                    {% for i in list %}
-                        <tr>
-                            <td> {{ i[1] }} </td>
-                            <td> {{ i[2] }} </td>
-                            <td> {{ i[3] }} </td>
-                            <td> {{ i[4] }} </td>
-                            <td> {{ i[5] }} </td>
-                            <td> {{ i[6] }} </td>
-                            <td> {{ i[7] }} </td>
-                            <td> {{ i[8] }} </td>
-                            <td> {{ i[9] }} </td>
-                            <td> {{ i[10] }} </td>
-                        </tr>
-                    {% endfor %}
-                </table>
+        <div class="container">
+            <img src="../static/logo.png" width="400px" style="margin: 0px 25px; margin-bottom: 15px;">
+            <div id="submitform">
+                <form action="/" method="post">
+                    <label for="teamname">Team Name:</label>
+                    <input type="text" id="teamname" name="teamname">
+                    <label for="gametype">Game Type:</label>
+                    <select id="game" name="game">
+                        <option value="League of Legends">League of Legends</option>
+                        <option value="Valorant">Valorant</option>
+                    </select><br>
+                    <label for="player1">Player 1:</label>
+                    <input type="text" id="player1" name="player1" size="18">
+                    <label for="player2">Player 2:</label>
+                    <input type="text" id="player2" name="player2" size="18"><br>
+                    <label for="player3">Player 3:</label>
+                    <input type="text" id="player3" name="player3" size="18">
+                    <label for="player4">Player 4:</label>
+                    <input type="text" id="player4" name="player4" size="18"><br>
+                    <label for="player5">Player 5:</label>
+                    <input type="text" id="player5" name="player5" size="18">
+                    <label for="avgrank">Average Rank:</label>
+                    <input type="text" id="avgrank" name="avgrank" size="12"><br>
+                    <label for="time">Time:</label>
+                    <input type="datetime-local" id="time" name="time"><br>
+                    <label for="discord">Discord Username:</label>
+                    <input type="text" id="discord" name="discord" size="14"><br>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>              
             </div>
         </div>
+        <br>
+        <div class="container">
+            <div id="content">
+                <div id="directory">
+                    <table>
+                        <tr>
+                            <th> Game </th>
+                            <th> Team Name </th>
+                            <th> Player 1 </th>
+                            <th> Player 2 </th>
+                            <th> Player 3 </th>
+                            <th> Player 4 </th>
+                            <th> Player 5 </th>
+                            <th> Average Rank </th>
+                            <th> Scrim Time </th>
+                            <th> Discord Username </th>
+                        </tr>
+                        {% for i in list %}
+                            <tr>
+                                <td> {{ i[1] }} </td>
+                                <td> {{ i[2] }} </td>
+                                <td> {{ i[3] }} </td>
+                                <td> {{ i[4] }} </td>
+                                <td> {{ i[5] }} </td>
+                                <td> {{ i[6] }} </td>
+                                <td> {{ i[7] }} </td>
+                                <td> {{ i[8] }} </td>
+                                <td> {{ i[9] }} </td>
+                                <td> {{ i[10] }} </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+        
     </body>
 </html>
