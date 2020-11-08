@@ -27,7 +27,7 @@ We have a lot of ideas on how to improve Scrim Searcher, and we'll be pursuing t
 
 [Check out our app on Heroku](https://scrim-searcher.herokuapp.com/)
 
-If you wish to run this app locally, make sure that you have installed Python3 and use the following commands:
-`venv/Scripts/activate
-pip install flask
-pip install mysql-connector`
+If you wish to run this app locally, make sure that you have installed Python3 and use the following commands (for Windows):
+`venv/Scripts/activate`
+`pip install mysql-connector-python-rf`
+`pip install flask`
