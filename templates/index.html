@@ -11,7 +11,7 @@
     <body>
         <h1> Scrim Searcher </h1>
         <div id="submitform">
-            <form>
+            <form action="/signup" method="post">
                 <label for="teamname">Team name:</label><br>
                 <input type="text" id="teamname" name="teamname"><br>
                 <label for="player1">Player 1:</label><br>
@@ -30,6 +30,7 @@
                 <input type="datetime-local" id="time" name="time"><br>
                 <label for="discord">Discord User:</label><br>
                 <input type="text" id="discord" name="discord"><br>
+                <input type="submit" value="submit">
               </form>              
         </div>
         <div id="content">
