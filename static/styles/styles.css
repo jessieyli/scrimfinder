@@ -1,8 +1,16 @@
 body {
-    background-color: #6ed4f0;
+    background-color: lightcoral;
     text-align: center;
 }
 
-.content {
+#content {
+    display: flex;
+    justify-content: center;
+}
 
+#directory {
+    text-align: center;
+    height: 200px;
+    width: 400px;
+    border: 3px solid black;
 }
