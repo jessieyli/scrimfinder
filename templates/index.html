@@ -11,14 +11,14 @@
     <body>
         <h1> Scrim Searcher </h1>
         <div id="submitform">
-            <form action="/submitteam" method="post">
+            <form action="/" method="post">
                 <label for="teamname">Team name:</label><br>
                 <input type="text" id="teamname" name="teamname"><br>
-                <label for="gametype">Gape type:</label><br>
+                <label for="gametype">Game type:</label><br>
                 <select id="game" name="game">
                     <option value="league">League of Legends</option>
                     <option value="valorant">Valorant</option>
-                </select>
+                </select><br>
                 <label for="player1">Player 1:</label><br>
                 <input type="text" id="player1" name="player1"><br>
                 <label for="player2">Player 2:</label><br>
@@ -38,9 +38,37 @@
                 <input type="submit" value="submit">
               </form>              
         </div>
+        <br>
         <div id="content">
             <div id="directory">
-                <p> THIS IS WHERE SCRIMS </p>
+                <table>
+                    <tr>
+                        <th> Game </th>
+                        <th> Team Name </th>
+                        <th> Player 1 </th>
+                        <th> Player 2 </th>
+                        <th> Player 3 </th>
+                        <th> Player 4 </th>
+                        <th> Player 5 </th>
+                        <th> Average Rank </th>
+                        <th> Scrim Time </th>
+                        <th> Discord Username </th>
+                    </tr>
+                    {% for i in list %}
+                        <tr>
+                            <td> {{ i[1] }} </td>
+                            <td> {{ i[2] }} </td>
+                            <td> {{ i[3] }} </td>
+                            <td> {{ i[4] }} </td>
+                            <td> {{ i[5] }} </td>
+                            <td> {{ i[6] }} </td>
+                            <td> {{ i[7] }} </td>
+                            <td> {{ i[8] }} </td>
+                            <td> {{ i[9] }} </td>
+                            <td> {{ i[10] }} </td>
+                        </tr>
+                    {% endfor %}
+                </table>
             </div>
         </div>
     </body>
