@@ -11,9 +11,14 @@
     <body>
         <h1> Scrim Searcher </h1>
         <div id="submitform">
-            <form action="/signup" method="post">
+            <form action="/submitteam" method="post">
                 <label for="teamname">Team name:</label><br>
                 <input type="text" id="teamname" name="teamname"><br>
+                <label for="gametype">Gape type:</label><br>
+                <select id="game" name="game">
+                    <option value="league">League of Legends</option>
+                    <option value="valorant">Valorant</option>
+                </select>
                 <label for="player1">Player 1:</label><br>
                 <input type="text" id="player1" name="player1"><br>
                 <label for="player2">Player 2:</label><br>
